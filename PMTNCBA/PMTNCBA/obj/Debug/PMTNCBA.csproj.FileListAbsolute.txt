@@ -1,0 +1,17 @@
+D:\PMTN\PMTNCBA\PMTNCBA\bin\Debug\PMTNCBA.exe.config
+D:\PMTN\PMTNCBA\PMTNCBA\bin\Debug\PMTNCBA.exe
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.csproj.AssemblyReference.cache
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.csproj.SuggestedBindingRedirects.cache
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.AddQ.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Dangky.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Dangnhap.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Help.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.QL.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Giaodien.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Properties.Resources.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.Thi.resources
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.csproj.GenerateResource.cache
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.csproj.CoreCompileInputs.cache
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.exe
+D:\PMTN\PMTNCBA\PMTNCBA\obj\Debug\PMTNCBA.pdb
+D:\PMTN\PMTNCBA\PMTNCBA\bin\Debug\PMTNCBA.pdb
