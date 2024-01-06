@@ -33,8 +33,10 @@
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKỳThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
@@ -159,16 +161,23 @@
             this.kyThiBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.lTCSDLDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.kyThiBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.lTCSDLDataSet1 = new PMTNCBA.LTCSDLDataSet1();
             this.kyThiBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.kyThiTableAdapter1 = new PMTNCBA.LTCSDLDataSet1TableAdapters.KyThiTableAdapter();
             this.kyThiBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.kyThiTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KyThiTableAdapter();
             this.ketQuaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KetQuaTableAdapter();
             this.ltcsdlDataSet2 = new PMTNCBA.LTCSDLDataSet();
-            this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ketQuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maKQDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maKyThiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTGThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tGTraLoiDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,11 +213,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource8)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ltcsdlDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -218,7 +227,8 @@
             this.hệThốngToolStripMenuItem,
             this.chứcNăngToolStripMenuItem,
             this.trợGiúpToolStripMenuItem,
-            this.nhómTácGiảToolStripMenuItem});
+            this.nhómTácGiảToolStripMenuItem,
+            this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1521, 28);
@@ -239,6 +249,7 @@
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
             this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.chứcNăngToolStripMenuItem_Click);
             // 
             // quảnLýKỳThiToolStripMenuItem
             // 
@@ -246,6 +257,13 @@
             this.quảnLýKỳThiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.quảnLýKỳThiToolStripMenuItem.Text = "Quản lý kỳ thi";
             this.quảnLýKỳThiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKỳThiToolStripMenuItem_Click);
+            // 
+            // questionToolStripMenuItem
+            // 
+            this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
+            this.questionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.questionToolStripMenuItem.Text = "Question";
+            this.questionToolStripMenuItem.Click += new System.EventHandler(this.questionToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -259,6 +277,13 @@
             this.nhómTácGiảToolStripMenuItem.Name = "nhómTácGiảToolStripMenuItem";
             this.nhómTácGiảToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.nhómTácGiảToolStripMenuItem.Text = "Nhóm tác giả";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -353,6 +378,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(403, 357);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick_1);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
             // 
             // maKyThiDataGridViewTextBoxColumn
             // 
@@ -938,7 +964,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label36.Location = new System.Drawing.Point(97, 246);
+            this.label36.Location = new System.Drawing.Point(114, 246);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(43, 46);
             this.label36.TabIndex = 3;
@@ -958,7 +984,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label22.Location = new System.Drawing.Point(97, 94);
+            this.label22.Location = new System.Drawing.Point(150, 94);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(43, 46);
             this.label22.TabIndex = 1;
@@ -985,7 +1011,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maKQDataGridViewTextBoxColumn,
+            this.maTSDataGridViewTextBoxColumn,
+            this.maKyThiDataGridViewTextBoxColumn1,
+            this.ngayThiDataGridViewTextBoxColumn,
+            this.diemDataGridViewTextBoxColumn,
+            this.tongTGThiDataGridViewTextBoxColumn,
+            this.tGTraLoiDeDataGridViewTextBoxColumn,
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn,
+            this.loaiDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.ketQuaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -1474,19 +1513,9 @@
             this.kyThiBindingSource6.DataMember = "KyThi";
             this.kyThiBindingSource6.DataSource = this.lTCSDLDataSetBindingSource1;
             // 
-            // lTCSDLDataSet1
-            // 
-            this.lTCSDLDataSet1.DataSetName = "LTCSDLDataSet1";
-            this.lTCSDLDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // kyThiBindingSource7
             // 
             this.kyThiBindingSource7.DataMember = "KyThi";
-            this.kyThiBindingSource7.DataSource = this.lTCSDLDataSet1;
-            // 
-            // kyThiTableAdapter1
-            // 
-            this.kyThiTableAdapter1.ClearBeforeFill = true;
             // 
             // kyThiBindingSource8
             // 
@@ -1526,12 +1555,83 @@
             this.ltcsdlDataSet2.DataSetName = "LTCSDLDataSet";
             this.ltcsdlDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // questionToolStripMenuItem
+            // ketQuaBindingSource
             // 
-            this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
-            this.questionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.questionToolStripMenuItem.Text = "Question";
-            this.questionToolStripMenuItem.Click += new System.EventHandler(this.questionToolStripMenuItem_Click);
+            this.ketQuaBindingSource.DataMember = "KetQua";
+            this.ketQuaBindingSource.DataSource = this.lTCSDLDataSetBindingSource2;
+            // 
+            // maKQDataGridViewTextBoxColumn
+            // 
+            this.maKQDataGridViewTextBoxColumn.DataPropertyName = "MaKQ";
+            this.maKQDataGridViewTextBoxColumn.HeaderText = "MaKQ";
+            this.maKQDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maKQDataGridViewTextBoxColumn.Name = "maKQDataGridViewTextBoxColumn";
+            this.maKQDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maKQDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maTSDataGridViewTextBoxColumn
+            // 
+            this.maTSDataGridViewTextBoxColumn.DataPropertyName = "MaTS";
+            this.maTSDataGridViewTextBoxColumn.HeaderText = "MaTS";
+            this.maTSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maTSDataGridViewTextBoxColumn.Name = "maTSDataGridViewTextBoxColumn";
+            this.maTSDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maKyThiDataGridViewTextBoxColumn1
+            // 
+            this.maKyThiDataGridViewTextBoxColumn1.DataPropertyName = "MaKyThi";
+            this.maKyThiDataGridViewTextBoxColumn1.HeaderText = "MaKyThi";
+            this.maKyThiDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.maKyThiDataGridViewTextBoxColumn1.Name = "maKyThiDataGridViewTextBoxColumn1";
+            this.maKyThiDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // ngayThiDataGridViewTextBoxColumn
+            // 
+            this.ngayThiDataGridViewTextBoxColumn.DataPropertyName = "NgayThi";
+            this.ngayThiDataGridViewTextBoxColumn.HeaderText = "NgayThi";
+            this.ngayThiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayThiDataGridViewTextBoxColumn.Name = "ngayThiDataGridViewTextBoxColumn";
+            this.ngayThiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // diemDataGridViewTextBoxColumn
+            // 
+            this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
+            this.diemDataGridViewTextBoxColumn.HeaderText = "Diem";
+            this.diemDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
+            this.diemDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tongTGThiDataGridViewTextBoxColumn
+            // 
+            this.tongTGThiDataGridViewTextBoxColumn.DataPropertyName = "TongTGThi";
+            this.tongTGThiDataGridViewTextBoxColumn.HeaderText = "TongTGThi";
+            this.tongTGThiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tongTGThiDataGridViewTextBoxColumn.Name = "tongTGThiDataGridViewTextBoxColumn";
+            this.tongTGThiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tGTraLoiDeDataGridViewTextBoxColumn
+            // 
+            this.tGTraLoiDeDataGridViewTextBoxColumn.DataPropertyName = "TGTraLoiDe";
+            this.tGTraLoiDeDataGridViewTextBoxColumn.HeaderText = "TGTraLoiDe";
+            this.tGTraLoiDeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tGTraLoiDeDataGridViewTextBoxColumn.Name = "tGTraLoiDeDataGridViewTextBoxColumn";
+            this.tGTraLoiDeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tGTraLoiTrungBinhDataGridViewTextBoxColumn
+            // 
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn.DataPropertyName = "TGTraLoiTrungBinh";
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn.HeaderText = "TGTraLoiTrungBinh";
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn.Name = "tGTraLoiTrungBinhDataGridViewTextBoxColumn";
+            this.tGTraLoiTrungBinhDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // loaiDataGridViewCheckBoxColumn
+            // 
+            this.loaiDataGridViewCheckBoxColumn.DataPropertyName = "Loai";
+            this.loaiDataGridViewCheckBoxColumn.HeaderText = "Loai";
+            this.loaiDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.loaiDataGridViewCheckBoxColumn.Name = "loaiDataGridViewCheckBoxColumn";
+            this.loaiDataGridViewCheckBoxColumn.Width = 125;
             // 
             // Giaodien
             // 
@@ -1596,12 +1696,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource8)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ltcsdlDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1712,9 +1812,9 @@
         private System.Windows.Forms.BindingSource kyThiBindingSource5;
         private System.Windows.Forms.BindingSource lTCSDLDataSetBindingSource1;
         private System.Windows.Forms.BindingSource kyThiBindingSource6;
-        private LTCSDLDataSet1 lTCSDLDataSet1;
+        //private LTCSDLDataSet1 lTCSDLDataSet1;
         private System.Windows.Forms.BindingSource kyThiBindingSource7;
-        private LTCSDLDataSet1TableAdapters.KyThiTableAdapter kyThiTableAdapter1;
+        //private LTCSDLDataSet1TableAdapters.KyThiTableAdapter kyThiTableAdapter1;
         private System.Windows.Forms.BindingSource kyThiBindingSource8;
         private System.Windows.Forms.BindingSource lTCSDLDataSetBindingSource2;
         private System.Windows.Forms.ToolStrip fillByToolStrip;
@@ -1749,5 +1849,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem quảnLýKỳThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem questionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKQDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maTSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKyThiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayThiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongTGThiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tGTraLoiDeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tGTraLoiTrungBinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn loaiDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.BindingSource ketQuaBindingSource;
     }
 }

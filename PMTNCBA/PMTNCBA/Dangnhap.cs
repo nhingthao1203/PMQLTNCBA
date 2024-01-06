@@ -329,6 +329,13 @@ namespace PMTNCBA
 
         }
 
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+            this.Hide();
+        }
+
         public override int GetHashCode()
         {
             int hashCode = -88866093;

@@ -32,9 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.monBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSet = new PMTNCBA.LTCSDLDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -77,22 +80,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lTCSDLDataSet = new PMTNCBA.LTCSDLDataSet();
-            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.MonTableAdapter();
-            this.lTCSDLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -102,25 +102,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 180);
+            this.groupBox1.Location = new System.Drawing.Point(0, 411);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 488);
+            this.groupBox1.Size = new System.Drawing.Size(1459, 264);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách đề thi";
@@ -128,25 +122,43 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 189);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(300, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(1447, 237);
             this.dataGridView1.TabIndex = 4;
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.monBindingSource2;
+            this.comboBox1.DisplayMember = "MaMon";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 152);
+            this.comboBox1.Location = new System.Drawing.Point(92, 359);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.ValueMember = "MaMon";
+            // 
+            // monBindingSource2
+            // 
+            this.monBindingSource2.DataMember = "Mon";
+            this.monBindingSource2.DataSource = this.lTCSDLDataSetBindingSource;
+            // 
+            // lTCSDLDataSetBindingSource
+            // 
+            this.lTCSDLDataSetBindingSource.DataSource = this.lTCSDLDataSet;
+            this.lTCSDLDataSetBindingSource.Position = 0;
+            // 
+            // lTCSDLDataSet
+            // 
+            this.lTCSDLDataSet.DataSetName = "LTCSDLDataSet";
+            this.lTCSDLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 133);
+            this.label3.Location = new System.Drawing.Point(49, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 2;
@@ -154,19 +166,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(120, 89);
+            this.button1.Location = new System.Drawing.Point(112, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(29, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 22);
-            this.textBox1.TabIndex = 0;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -176,7 +182,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(6, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 143);
+            this.groupBox2.Size = new System.Drawing.Size(313, 114);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Giảng viên";
@@ -184,7 +190,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(26, 84);
+            this.label21.Location = new System.Drawing.Point(35, 60);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 16);
             this.label21.TabIndex = 5;
@@ -202,7 +208,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 84);
+            this.label2.Location = new System.Drawing.Point(143, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 3;
@@ -229,7 +235,6 @@
             this.groupBox3.Controls.Add(this.comboBox2);
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
@@ -241,7 +246,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(348, 31);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1106, 546);
+            this.groupBox3.Size = new System.Drawing.Size(1106, 373);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết";
@@ -249,6 +254,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.numericUpDown5);
             this.groupBox5.Controls.Add(this.numericUpDown3);
@@ -261,7 +267,7 @@
             this.groupBox5.Controls.Add(this.trackBar1);
             this.groupBox5.Location = new System.Drawing.Point(578, 21);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(518, 504);
+            this.groupBox5.Size = new System.Drawing.Size(518, 331);
             this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tùy chọn cấu trúc đề thi";
@@ -269,7 +275,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(321, 320);
+            this.label19.Location = new System.Drawing.Point(351, 196);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(30, 16);
             this.label19.TabIndex = 14;
@@ -278,7 +284,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(85, 320);
+            this.label17.Location = new System.Drawing.Point(115, 196);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(25, 16);
             this.label17.TabIndex = 12;
@@ -286,14 +292,14 @@
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(357, 317);
+            this.numericUpDown5.Location = new System.Drawing.Point(387, 193);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(46, 22);
             this.numericUpDown5.TabIndex = 11;
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(128, 317);
+            this.numericUpDown3.Location = new System.Drawing.Point(158, 193);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(46, 22);
             this.numericUpDown3.TabIndex = 9;
@@ -301,7 +307,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(357, 281);
+            this.radioButton2.Location = new System.Drawing.Point(387, 157);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(85, 20);
             this.radioButton2.TabIndex = 8;
@@ -312,7 +318,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(207, 283);
+            this.radioButton1.Location = new System.Drawing.Point(237, 159);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(82, 20);
             this.radioButton1.TabIndex = 7;
@@ -323,7 +329,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(56, 283);
+            this.label16.Location = new System.Drawing.Point(86, 159);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 16);
             this.label16.TabIndex = 6;
@@ -332,7 +338,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(75, 185);
+            this.label15.Location = new System.Drawing.Point(70, 79);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 16);
             this.label15.TabIndex = 5;
@@ -341,7 +347,7 @@
             // trackBar3
             // 
             this.trackBar3.LargeChange = 1;
-            this.trackBar3.Location = new System.Drawing.Point(68, 211);
+            this.trackBar3.Location = new System.Drawing.Point(64, 105);
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(378, 56);
             this.trackBar3.TabIndex = 4;
@@ -349,7 +355,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(75, 87);
+            this.label13.Location = new System.Drawing.Point(70, 20);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 16);
             this.label13.TabIndex = 1;
@@ -358,7 +364,7 @@
             // trackBar1
             // 
             this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(68, 113);
+            this.trackBar1.Location = new System.Drawing.Point(64, 39);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(378, 56);
             this.trackBar1.TabIndex = 0;
@@ -414,6 +420,11 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 13;
             // 
+            // monBindingSource
+            // 
+            this.monBindingSource.DataMember = "Mon";
+            this.monBindingSource.DataSource = this.lTCSDLDataSet;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(35, 121);
@@ -434,9 +445,9 @@
             this.groupBox4.Controls.Add(this.checkBox3);
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Location = new System.Drawing.Point(40, 380);
+            this.groupBox4.Location = new System.Drawing.Point(12, 169);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(449, 138);
+            this.groupBox4.Size = new System.Drawing.Size(307, 138);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tùy chọn bảo mật đề";
@@ -445,7 +456,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(141, 100);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 22);
+            this.textBox5.Size = new System.Drawing.Size(154, 22);
             this.textBox5.TabIndex = 3;
             // 
             // checkBox3
@@ -562,56 +573,27 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button6);
-            this.groupBox6.Controls.Add(this.button5);
-            this.groupBox6.Controls.Add(this.button4);
-            this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Location = new System.Drawing.Point(348, 584);
+            this.groupBox6.Location = new System.Drawing.Point(89, 232);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1106, 84);
+            this.groupBox6.Size = new System.Drawing.Size(383, 84);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thao tác";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(744, 21);
+            this.button6.Location = new System.Drawing.Point(238, 21);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(99, 43);
             this.button6.TabIndex = 4;
             this.button6.Text = "Thoát";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(504, 21);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 43);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Xóa";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(503, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 43);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(285, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 43);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Cập nhật";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(87, 21);
+            this.button2.Location = new System.Drawing.Point(62, 21);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 43);
             this.button2.TabIndex = 0;
@@ -638,6 +620,7 @@
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
             // 
             // chứcNăngToolStripMenuItem
             // 
@@ -650,6 +633,7 @@
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
             // nhómTácGiảToolStripMenuItem
             // 
@@ -657,24 +641,9 @@
             this.nhómTácGiảToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.nhómTácGiảToolStripMenuItem.Text = "Nhóm tác giả";
             // 
-            // lTCSDLDataSet
-            // 
-            this.lTCSDLDataSet.DataSetName = "LTCSDLDataSet";
-            this.lTCSDLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // monBindingSource
-            // 
-            this.monBindingSource.DataMember = "Mon";
-            this.monBindingSource.DataSource = this.lTCSDLDataSet;
-            // 
             // monTableAdapter
             // 
             this.monTableAdapter.ClearBeforeFill = true;
-            // 
-            // lTCSDLDataSetBindingSource
-            // 
-            this.lTCSDLDataSetBindingSource.DataSource = this.lTCSDLDataSet;
-            this.lTCSDLDataSetBindingSource.Position = 0;
             // 
             // monBindingSource1
             // 
@@ -687,16 +656,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1471, 687);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox4);
             this.Name = "QL";
             this.Text = "Thông tin";
             this.Load += new System.EventHandler(this.QL_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -709,14 +683,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -733,7 +705,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -771,9 +742,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
@@ -787,5 +755,6 @@
         private LTCSDLDataSetTableAdapters.MonTableAdapter monTableAdapter;
         private System.Windows.Forms.BindingSource monBindingSource1;
         private System.Windows.Forms.BindingSource lTCSDLDataSetBindingSource;
+        private System.Windows.Forms.BindingSource monBindingSource2;
     }
 }

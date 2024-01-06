@@ -15,6 +15,7 @@ namespace PMTNCBA
         public static string MSV;
         public static string MATKHAU;
         public static bool SV = false;
+        public static string MaKyThi;
     }
     public struct thongtinnv
     {
