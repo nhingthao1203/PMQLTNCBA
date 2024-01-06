@@ -32,7 +32,7 @@ namespace PMTNCBA
             // TODO: This line of code loads data into the 'lTCSDLDataSet.KyThi' table. You can move, or remove it, as needed.
             this.kyThiTableAdapter.Fill(this.lTCSDLDataSet.KyThi);
             // TODO: This line of code loads data into the 'lTCSDLDataSet1.KyThi' table. You can move, or remove it, as needed.
-            this.kyThiTableAdapter1.Fill(this.lTCSDLDataSet1.KyThi);
+            //this.kyThiTableAdapter1.Fill(this.lTCSDLDataSet1.KyThi);
             // TODO: This line of code loads data into the 'lTCSDLDataSet.KetQua' table. You can move, or remove it, as needed.
             this.ketQuaTableAdapter.Fill(this.lTCSDLDataSet.KetQua);
             // TODO: This line of code loads data into the 'lTCSDLDataSet.KyThi' table. You can move, or remove it, as needed.
@@ -97,6 +97,22 @@ namespace PMTNCBA
                         // Hiển thị dữ liệu trong DataGridView
                         dataGridView2.DataSource = newDt;
                     }
+                    sql = "SELECT * FROM KetQua where MaTS = @dMaTS";
+                    SqlCommand newCmd1 = new SqlCommand(sql, conn);
+                    newCmd.Parameters.AddWithValue("@MaTS", thongtinsv.MSV);
+
+                    SqlDataReader newReader1 = newCmd.ExecuteReader(); // Mở DataReader mới
+
+                    // Xử lý kết quả truy vấn mới
+                    if (newReader1.HasRows)
+                    {
+                        DataTable newDt1 = new DataTable();
+                        newDt1.Load(newReader1); // Đọc dữ liệu vào DataTable
+
+                        // Hiển thị dữ liệu trong DataGridView
+                        dataGridView1.DataSource = newDt1;
+                    }
+
 
                     // Đóng DataReader mới sau khi hoàn thành việc sử dụng nó
                     newReader.Close();
@@ -131,6 +147,19 @@ namespace PMTNCBA
                     label66.Text = reader["DonViCongTac"].ToString();
                 }
 
+                SqlDataReader newReader1 = cmd.ExecuteReader();
+                string query2 = "SELECT * FROM KetQua";
+                SqlCommand cmd2 = new SqlCommand(query, conn);
+                if (newReader1.HasRows)
+                {
+                    DataTable newDt1 = new DataTable();
+                    newDt1.Load(newReader1); // Đọc dữ liệu vào DataTable
+
+                    // Hiển thị dữ liệu trong DataGridView
+                    dataGridView1.DataSource = newDt1;
+                }
+
+
                 reader.Close();
                 conn.Close();
             }
@@ -156,7 +185,7 @@ namespace PMTNCBA
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void label57_Click(object sender, EventArgs e)
@@ -251,9 +280,11 @@ namespace PMTNCBA
                 using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn
                 {
                     conn.Open();
-                    string sql = "select * from KetQua where MaTS = @MaTS"; // Sử dụng tham số để tránh lỗ hổng SQL Injection
+                    string sql = "select * from KetQua where MaTS = @MaTS AND MaKyThi = @MaKyThi"; // Sử dụng tham số để tránh lỗ hổng SQL Injection
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@MaTS", maTS);
+                    cmd.Parameters.AddWithValue("@MaKyThi", label42.Text);
+
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -272,18 +303,14 @@ namespace PMTNCBA
                             label36.Text = "Không Đạt";
                         }
                     }
+                    else
+                    {
+                        label43.Text = label41.Text = label39.Text = label22.Text = label36.Text = "null";
+                    }
                     reader.Close();
 
                 }
             }
-            
-
-            
-                // Không cần đóng kết nối ngay lập tức ở đây vì bạn sẽ sử dụng nó trong phạm vi này
-            
-            
-
-
 
         }
 
@@ -317,6 +344,95 @@ namespace PMTNCBA
 
         private void questionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (thongtinnv.GV == true)
+            {
+                AddQ add = new AddQ();
+                add.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không phải là Giáo viên!");
+            }
+            
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (thongtinnv.GV == true)
+            {
+                QL ql = new QL();
+                ql.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không phải là Giáo viên!");
+            }
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+            //thông tin buổi thi
+            DataGridViewRow row = new DataGridViewRow();
+            row = dataGridView2.Rows[e.RowIndex];
+            label28.Text = row.Cells[2].Value.ToString();
+            label27.Text = row.Cells[1].Value.ToString();
+            label26.Text = row.Cells[5].Value.ToString();
+            label25.Text = row.Cells[8].Value.ToString();
+            label24.Text = row.Cells[3].Value.ToString();
+            label23.Text = row.Cells[6].Value.ToString();
+            label34.Text = row.Cells[0].Value.ToString();
+            label30.Text = row.Cells[4].Value.ToString();
+            label29.Text = row.Cells[7].Value.ToString();
+
+            if (thongtinsv.SV == true)
+            {
+                label44.Text = row.Cells[2].Value.ToString();
+                label42.Text = row.Cells[0].Value.ToString();
+                string maTS = thongtinsv.MSV;
+                label40.Text = maTS;
+                using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn
+                {
+                    conn.Open();
+                    string sql = "select * from KetQua where MaTS = @MaTS AND MaKyThi = @MaKyThi"; // Sử dụng tham số để tránh lỗ hổng SQL Injection
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@MaTS", maTS);
+                    cmd.Parameters.AddWithValue("@MaKyThi", label42.Text);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        label43.Text = reader["NgayThi"].ToString();
+                        label41.Text = reader["TongTGThi"].ToString();
+                        label39.Text = reader["TGTraLoiTrungBinh"].ToString();
+                        label22.Text = reader["Diem"].ToString();
+
+                        if (reader["Loai"].ToString() == "1")
+                        {
+                            label36.Text = "Đạt";
+                        }
+                        else
+                        {
+                            label36.Text = "Không Đạt";
+                        }
+                    }
+                    else
+                    {
+                        label43.Text = label41.Text = label39.Text = label22.Text = label36.Text = "null";
+                    }
+                    reader.Close();
+
+                }
+            }
+
 
         }
 

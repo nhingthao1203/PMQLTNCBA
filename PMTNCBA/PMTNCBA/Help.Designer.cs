@@ -29,19 +29,8 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.linkthemsv = new System.Windows.Forms.LinkLabel();
-            this.linktimmt = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.linkxoasv = new System.Windows.Forms.LinkLabel();
-            this.linksuasv = new System.Windows.Forms.LinkLabel();
-            this.linktimsv = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.linkxoamt = new System.Windows.Forms.LinkLabel();
-            this.linksuamt = new System.Windows.Forms.LinkLabel();
-            this.linkthemmt = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.linkxoach = new System.Windows.Forms.LinkLabel();
             this.linksuach = new System.Windows.Forms.LinkLabel();
@@ -54,193 +43,59 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýKỳThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel3.Controls.Add(this.linkthemsv);
-            this.panel3.Controls.Add(this.linktimmt);
-            this.panel3.Controls.Add(this.linkLabel3);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.linkxoasv);
-            this.panel3.Controls.Add(this.linksuasv);
-            this.panel3.Controls.Add(this.linktimsv);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.linkxoamt);
-            this.panel3.Controls.Add(this.linksuamt);
-            this.panel3.Controls.Add(this.linkthemmt);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.linkxoach);
             this.panel3.Controls.Add(this.linksuach);
             this.panel3.Controls.Add(this.linkthemch);
             this.panel3.Controls.Add(this.linktimch);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(13, 13);
+            this.panel3.Location = new System.Drawing.Point(12, 31);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(380, 775);
+            this.panel3.Size = new System.Drawing.Size(380, 682);
             this.panel3.TabIndex = 1;
             // 
-            // linkthemsv
+            // label5
             // 
-            this.linkthemsv.AutoSize = true;
-            this.linkthemsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkthemsv.Location = new System.Drawing.Point(46, 444);
-            this.linkthemsv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkthemsv.Name = "linkthemsv";
-            this.linkthemsv.Size = new System.Drawing.Size(79, 25);
-            this.linkthemsv.TabIndex = 22;
-            this.linkthemsv.TabStop = true;
-            this.linkthemsv.Text = "2.Thêm";
-            // 
-            // linktimmt
-            // 
-            this.linktimmt.AutoSize = true;
-            this.linktimmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linktimmt.Location = new System.Drawing.Point(45, 208);
-            this.linktimmt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linktimmt.Name = "linktimmt";
-            this.linktimmt.Size = new System.Drawing.Size(107, 25);
-            this.linktimmt.TabIndex = 9;
-            this.linktimmt.TabStop = true;
-            this.linktimmt.Text = "1.Tìm kiếm";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.Location = new System.Drawing.Point(45, 718);
-            this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(125, 25);
-            this.linkLabel3.TabIndex = 21;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "1.Xem bài thi";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(4, 672);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(263, 29);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "V. Xem bài thi của SV\r\n";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(46, 618);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(165, 25);
-            this.linkLabel2.TabIndex = 19;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "1.Xem bảng điểm";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(7, 585);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(234, 29);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "IV. Xem bảng điểm\r\n";
-            // 
-            // linkxoasv
-            // 
-            this.linkxoasv.AutoSize = true;
-            this.linkxoasv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkxoasv.Location = new System.Drawing.Point(50, 535);
-            this.linkxoasv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkxoasv.Name = "linkxoasv";
-            this.linkxoasv.Size = new System.Drawing.Size(64, 25);
-            this.linkxoasv.TabIndex = 17;
-            this.linkxoasv.TabStop = true;
-            this.linkxoasv.Text = "4.Xóa";
-            // 
-            // linksuasv
-            // 
-            this.linksuasv.AutoSize = true;
-            this.linksuasv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linksuasv.Location = new System.Drawing.Point(50, 490);
-            this.linksuasv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linksuasv.Name = "linksuasv";
-            this.linksuasv.Size = new System.Drawing.Size(64, 25);
-            this.linksuasv.TabIndex = 16;
-            this.linksuasv.TabStop = true;
-            this.linksuasv.Text = "3.Sửa";
-            // 
-            // linktimsv
-            // 
-            this.linktimsv.AutoSize = true;
-            this.linktimsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linktimsv.Location = new System.Drawing.Point(46, 402);
-            this.linktimsv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linktimsv.Name = "linktimsv";
-            this.linktimsv.Size = new System.Drawing.Size(107, 25);
-            this.linktimsv.TabIndex = 14;
-            this.linktimsv.TabStop = true;
-            this.linktimsv.Text = "1.Tìm kiếm";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(4, 326);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(246, 29);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "III. Quản lý sinh viên";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(7, 368);
+            this.label11.Location = new System.Drawing.Point(4, 249);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(246, 29);
             this.label11.TabIndex = 13;
             this.label11.Text = "III. Quản lý sinh viên";
-            // 
-            // linkxoamt
-            // 
-            this.linkxoamt.AutoSize = true;
-            this.linkxoamt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkxoamt.Location = new System.Drawing.Point(46, 322);
-            this.linkxoamt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkxoamt.Name = "linkxoamt";
-            this.linkxoamt.Size = new System.Drawing.Size(64, 25);
-            this.linkxoamt.TabIndex = 12;
-            this.linkxoamt.TabStop = true;
-            this.linkxoamt.Text = "4.Xóa";
-            // 
-            // linksuamt
-            // 
-            this.linksuamt.AutoSize = true;
-            this.linksuamt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linksuamt.Location = new System.Drawing.Point(46, 286);
-            this.linksuamt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linksuamt.Name = "linksuamt";
-            this.linksuamt.Size = new System.Drawing.Size(64, 25);
-            this.linksuamt.TabIndex = 11;
-            this.linksuamt.TabStop = true;
-            this.linksuamt.Text = "3.Sửa";
-            // 
-            // linkthemmt
-            // 
-            this.linkthemmt.AutoSize = true;
-            this.linkthemmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkthemmt.Location = new System.Drawing.Point(45, 250);
-            this.linkthemmt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkthemmt.Name = "linkthemmt";
-            this.linkthemmt.Size = new System.Drawing.Size(79, 25);
-            this.linkthemmt.TabIndex = 10;
-            this.linkthemmt.TabStop = true;
-            this.linkthemmt.Text = "2.Thêm";
             // 
             // label10
             // 
@@ -265,6 +120,7 @@
             this.linkxoach.TabIndex = 7;
             this.linkxoach.TabStop = true;
             this.linkxoach.Text = "4.Xóa";
+            this.linkxoach.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkxoach_LinkClicked);
             // 
             // linksuach
             // 
@@ -277,6 +133,7 @@
             this.linksuach.TabIndex = 6;
             this.linksuach.TabStop = true;
             this.linksuach.Text = "3.Sửa";
+            this.linksuach.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linksuach_LinkClicked);
             // 
             // linkthemch
             // 
@@ -289,6 +146,7 @@
             this.linkthemch.TabIndex = 5;
             this.linkthemch.TabStop = true;
             this.linkthemch.Text = "2.Thêm";
+            this.linkthemch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkthemch_LinkClicked);
             // 
             // linktimch
             // 
@@ -364,25 +222,90 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(415, 13);
+            this.panel1.Location = new System.Drawing.Point(414, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 775);
+            this.panel1.Size = new System.Drawing.Size(708, 682);
             this.panel1.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 17);
+            this.label4.Location = new System.Drawing.Point(27, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(0, 16);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Help";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hệThốngToolStripMenuItem,
+            this.chứcNăngToolStripMenuItem,
+            this.trợGiúpToolStripMenuItem,
+            this.nhómTácGiảToolStripMenuItem,
+            this.thoátToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1139, 28);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // hệThốngToolStripMenuItem
+            // 
+            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
+            // 
+            // chứcNăngToolStripMenuItem
+            // 
+            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýKỳThiToolStripMenuItem,
+            this.questionToolStripMenuItem});
+            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.chứcNăngToolStripMenuItem_Click);
+            // 
+            // quảnLýKỳThiToolStripMenuItem
+            // 
+            this.quảnLýKỳThiToolStripMenuItem.Name = "quảnLýKỳThiToolStripMenuItem";
+            this.quảnLýKỳThiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýKỳThiToolStripMenuItem.Text = "Quản lý kỳ thi";
+            this.quảnLýKỳThiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKỳThiToolStripMenuItem_Click);
+            // 
+            // questionToolStripMenuItem
+            // 
+            this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
+            this.questionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.questionToolStripMenuItem.Text = "Question";
+            this.questionToolStripMenuItem.Click += new System.EventHandler(this.questionToolStripMenuItem_Click);
+            // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            // 
+            // nhómTácGiảToolStripMenuItem
+            // 
+            this.nhómTácGiảToolStripMenuItem.Name = "nhómTácGiảToolStripMenuItem";
+            this.nhómTácGiảToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
+            this.nhómTácGiảToolStripMenuItem.Text = "Nhóm tác giả";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 825);
+            this.ClientSize = new System.Drawing.Size(1139, 746);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -396,6 +319,8 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,19 +329,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.LinkLabel linkthemsv;
-        private System.Windows.Forms.LinkLabel linktimmt;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.LinkLabel linkxoasv;
-        private System.Windows.Forms.LinkLabel linksuasv;
-        private System.Windows.Forms.LinkLabel linktimsv;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.LinkLabel linkxoamt;
-        private System.Windows.Forms.LinkLabel linksuamt;
-        private System.Windows.Forms.LinkLabel linkthemmt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel linkxoach;
         private System.Windows.Forms.LinkLabel linksuach;
@@ -428,6 +341,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýKỳThiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem questionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhómTácGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

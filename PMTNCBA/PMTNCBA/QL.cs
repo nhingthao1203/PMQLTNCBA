@@ -83,10 +83,29 @@ namespace PMTNCBA
                 }
 
                 cmd.ExecuteNonQuery();
-          
+
                 MessageBox.Show("Thêm thông tin thành công!");
             }
 
+        }
+
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giaodien giaodien = new Giaodien();
+            giaodien.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+            this.Hide();
         }
 
         private void QL_Load(object sender, EventArgs e)
@@ -118,5 +137,47 @@ namespace PMTNCBA
                 reader.Close();
             }
         }
+
+            private void button1_Click(object sender, EventArgs e)
+            {
+                string constr = "Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(constr);
+
+                try
+                {
+                    conn.Open();
+
+                    string mamon = comboBox1.Text;
+                    using (SqlConnection newConn = new SqlConnection(constr))
+                    {
+                        newConn.Open();
+                        string sql = "SELECT * FROM KyThi where MaMon = @MaMon";
+                        SqlCommand newCmd = new SqlCommand(sql, newConn);
+                        newCmd.Parameters.AddWithValue("@MaMon", mamon);
+
+                        using (SqlDataReader newReader = newCmd.ExecuteReader()) // Mở DataReader mới
+                        {
+                            if (newReader.HasRows)
+                            {
+                                DataTable newDt = new DataTable();
+                                newDt.Load(newReader); // Đọc dữ liệu vào DataTable
+
+                                // Hiển thị dữ liệu trong DataGridView
+                                dataGridView1.DataSource = newDt;
+                            }
+                        }
+                    }
+            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close(); // Đóng kết nối ban đầu
+                }
+
+            }
     }
 }
+
