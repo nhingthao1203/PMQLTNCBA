@@ -127,6 +127,13 @@ namespace PMTNCBA
             this.Hide();
         }
 
+        private void tácGảiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
+        }
+
         private void Dangky_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lTCSDLDataSet.Khoa' table. You can move, or remove it, as needed.

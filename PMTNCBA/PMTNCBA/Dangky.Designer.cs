@@ -64,6 +64,7 @@
             this.thiSinhBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.lopTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.LopTableAdapter();
             this.khoaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KhoaTableAdapter();
+            this.tácGảiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource1)).BeginInit();
@@ -145,6 +146,7 @@
             this.tCUQuizToolStripMenuItem,
             this.côngCụToolStripMenuItem,
             this.trợGiúpToolStripMenuItem,
+            this.tácGảiToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -325,6 +327,13 @@
             // 
             this.khoaTableAdapter.ClearBeforeFill = true;
             // 
+            // tácGảiToolStripMenuItem
+            // 
+            this.tácGảiToolStripMenuItem.Name = "tácGảiToolStripMenuItem";
+            this.tácGảiToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.tácGảiToolStripMenuItem.Text = "Tác giả";
+            this.tácGảiToolStripMenuItem.Click += new System.EventHandler(this.tácGảiToolStripMenuItem_Click);
+            // 
             // Dangky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,5 +413,6 @@
         private System.Windows.Forms.BindingSource khoaBindingSource;
         private LTCSDLDataSetTableAdapters.KhoaTableAdapter khoaTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tácGảiToolStripMenuItem;
     }
 }

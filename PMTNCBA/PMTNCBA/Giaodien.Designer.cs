@@ -111,6 +111,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ketQuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -168,7 +169,14 @@
             this.kyThiTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KyThiTableAdapter();
             this.ketQuaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KetQuaTableAdapter();
             this.ltcsdlDataSet2 = new PMTNCBA.LTCSDLDataSet();
-            this.ketQuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSet1 = new PMTNCBA.LTCSDLDataSet1();
+            this.lTCSDLDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.ketQuaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSet21 = new PMTNCBA.LTCSDLDataSet2();
+            this.lTCSDLDataSet21BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketQuaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ketQuaTableAdapter1 = new PMTNCBA.LTCSDLDataSet2TableAdapters.KetQuaTableAdapter();
             this.maKQDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maKyThiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -197,6 +205,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -217,7 +226,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource8)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ltcsdlDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet21BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -254,14 +269,14 @@
             // quảnLýKỳThiToolStripMenuItem
             // 
             this.quảnLýKỳThiToolStripMenuItem.Name = "quảnLýKỳThiToolStripMenuItem";
-            this.quảnLýKỳThiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýKỳThiToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.quảnLýKỳThiToolStripMenuItem.Text = "Quản lý kỳ thi";
             this.quảnLýKỳThiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKỳThiToolStripMenuItem_Click);
             // 
             // questionToolStripMenuItem
             // 
             this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
-            this.questionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.questionToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.questionToolStripMenuItem.Text = "Question";
             this.questionToolStripMenuItem.Click += new System.EventHandler(this.questionToolStripMenuItem_Click);
             // 
@@ -277,6 +292,7 @@
             this.nhómTácGiảToolStripMenuItem.Name = "nhómTácGiảToolStripMenuItem";
             this.nhómTácGiảToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.nhómTácGiảToolStripMenuItem.Text = "Nhóm tác giả";
+            this.nhómTácGiảToolStripMenuItem.Click += new System.EventHandler(this.nhómTácGiảToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
@@ -804,6 +820,7 @@
             this.button8.TabIndex = 15;
             this.button8.Text = "Vào thi";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -1024,13 +1041,18 @@
             this.tGTraLoiDeDataGridViewTextBoxColumn,
             this.tGTraLoiTrungBinhDataGridViewTextBoxColumn,
             this.loaiDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.ketQuaBindingSource;
+            this.dataGridView1.DataSource = this.ketQuaBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(982, 193);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ketQuaBindingSource
+            // 
+            this.ketQuaBindingSource.DataMember = "KetQua";
+            this.ketQuaBindingSource.DataSource = this.lTCSDLDataSetBindingSource2;
             // 
             // groupBox7
             // 
@@ -1555,10 +1577,44 @@
             this.ltcsdlDataSet2.DataSetName = "LTCSDLDataSet";
             this.ltcsdlDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ketQuaBindingSource
+            // lTCSDLDataSet1
             // 
-            this.ketQuaBindingSource.DataMember = "KetQua";
-            this.ketQuaBindingSource.DataSource = this.lTCSDLDataSetBindingSource2;
+            this.lTCSDLDataSet1.DataSetName = "LTCSDLDataSet1";
+            this.lTCSDLDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lTCSDLDataSet1BindingSource
+            // 
+            this.lTCSDLDataSet1BindingSource.DataSource = this.lTCSDLDataSet1;
+            this.lTCSDLDataSet1BindingSource.Position = 0;
+            // 
+            // lTCSDLDataSetBindingSource3
+            // 
+            this.lTCSDLDataSetBindingSource3.DataSource = this.lTCSDLDataSet;
+            this.lTCSDLDataSetBindingSource3.Position = 0;
+            // 
+            // ketQuaBindingSource1
+            // 
+            this.ketQuaBindingSource1.DataMember = "KetQua";
+            this.ketQuaBindingSource1.DataSource = this.lTCSDLDataSetBindingSource3;
+            // 
+            // lTCSDLDataSet21
+            // 
+            this.lTCSDLDataSet21.DataSetName = "LTCSDLDataSet2";
+            this.lTCSDLDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lTCSDLDataSet21BindingSource
+            // 
+            this.lTCSDLDataSet21BindingSource.DataSource = this.lTCSDLDataSet21;
+            this.lTCSDLDataSet21BindingSource.Position = 0;
+            // 
+            // ketQuaBindingSource2
+            // 
+            this.ketQuaBindingSource2.DataMember = "KetQua";
+            this.ketQuaBindingSource2.DataSource = this.lTCSDLDataSet21BindingSource;
+            // 
+            // ketQuaTableAdapter1
+            // 
+            this.ketQuaTableAdapter1.ClearBeforeFill = true;
             // 
             // maKQDataGridViewTextBoxColumn
             // 
@@ -1676,6 +1732,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1701,7 +1758,13 @@
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ltcsdlDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet21BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1850,6 +1913,15 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýKỳThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem questionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.BindingSource ketQuaBindingSource;
+        private System.Windows.Forms.BindingSource ketQuaBindingSource1;
+        private System.Windows.Forms.BindingSource lTCSDLDataSetBindingSource3;
+        private LTCSDLDataSet1 lTCSDLDataSet1;
+        private System.Windows.Forms.BindingSource lTCSDLDataSet1BindingSource;
+        private System.Windows.Forms.BindingSource lTCSDLDataSet21BindingSource;
+        private LTCSDLDataSet2 lTCSDLDataSet21;
+        private System.Windows.Forms.BindingSource ketQuaBindingSource2;
+        private LTCSDLDataSet2TableAdapters.KetQuaTableAdapter ketQuaTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maKQDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maKyThiDataGridViewTextBoxColumn1;
@@ -1859,6 +1931,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tGTraLoiDeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tGTraLoiTrungBinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn loaiDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.BindingSource ketQuaBindingSource;
     }
 }

@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LTCSDLDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LTCSDLDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTCSDLDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +106,12 @@
     </Compile>
     <Compile Include="SelectCourse.Designer.cs">
       <DependentUpon>SelectCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TG.Designer.cs">
+      <DependentUpon>TG.cs</DependentUpon>
     </Compile>
     <Compile Include="Thi.cs">
       <SubType>Form</SubType>
@@ -139,6 +150,9 @@
     <EmbeddedResource Include="SelectCourse.resx">
       <DependentUpon>SelectCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TG.resx">
+      <DependentUpon>TG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Thi.resx">
       <DependentUpon>Thi.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +180,17 @@
     </None>
     <None Include="LTCSDLDataSet11.xss">
       <DependentUpon>LTCSDLDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="LTCSDLDataSet2.xsc">
+      <DependentUpon>LTCSDLDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LTCSDLDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LTCSDLDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LTCSDLDataSet2.xss">
+      <DependentUpon>LTCSDLDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

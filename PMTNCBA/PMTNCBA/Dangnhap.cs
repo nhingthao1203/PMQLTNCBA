@@ -336,6 +336,13 @@ namespace PMTNCBA
             this.Hide();
         }
 
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
+        }
+
         public override int GetHashCode()
         {
             int hashCode = -88866093;

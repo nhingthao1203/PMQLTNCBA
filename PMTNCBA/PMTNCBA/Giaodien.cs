@@ -29,6 +29,8 @@ namespace PMTNCBA
 
         private void Giaodien_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lTCSDLDataSet21.KetQua' table. You can move, or remove it, as needed.
+            this.ketQuaTableAdapter1.Fill(this.lTCSDLDataSet21.KetQua);
             // TODO: This line of code loads data into the 'lTCSDLDataSet.KyThi' table. You can move, or remove it, as needed.
             this.kyThiTableAdapter.Fill(this.lTCSDLDataSet.KyThi);
             // TODO: This line of code loads data into the 'lTCSDLDataSet1.KyThi' table. You can move, or remove it, as needed.
@@ -65,6 +67,7 @@ namespace PMTNCBA
                     String doituong = "";
                     // Đọc dữ liệu từ SqlDataReader vào các label
                     label68.Text = reader["Ten"].ToString();
+                    thongtinsv.Ten = label68.Text;
                     label67.Text = reader["NgaySinh"].ToString();
                     label66.Text = reader["Lop"].ToString();
                     if (reader["Khoa"].ToString() == "KHOA01")
@@ -146,7 +149,7 @@ namespace PMTNCBA
                     label67.Text = reader["NgaySinh"].ToString();
                     label66.Text = reader["DonViCongTac"].ToString();
                 }
-
+                reader.Close();
                 SqlDataReader newReader1 = cmd.ExecuteReader();
                 string query2 = "SELECT * FROM KetQua";
                 SqlCommand cmd2 = new SqlCommand(query, conn);
@@ -366,9 +369,9 @@ namespace PMTNCBA
         {
             if (thongtinnv.GV == true)
             {
-                QL ql = new QL();
-                ql.Show();
-                this.Hide();
+                //QL ql = new QL();
+                //ql.Show();
+                //this.Hide();
             }
             else
             {
@@ -401,7 +404,7 @@ namespace PMTNCBA
                 using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn
                 {
                     conn.Open();
-                    string sql = "select * from KetQua where MaTS = @MaTS AND MaKyThi = @MaKyThi"; // Sử dụng tham số để tránh lỗ hổng SQL Injection
+                    string sql = "select * from KetQua where MaTS = @MaTS"; // Sử dụng tham số để tránh lỗ hổng SQL Injection
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@MaTS", maTS);
                     cmd.Parameters.AddWithValue("@MaKyThi", label42.Text);
@@ -434,6 +437,20 @@ namespace PMTNCBA
             }
 
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SelectCourse scourse = new SelectCourse();
+            scourse.Show();
+            this.Hide();
+        }
+
+        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
         }
 
         private void tabControl2_MouseClick(object sender, MouseEventArgs e)

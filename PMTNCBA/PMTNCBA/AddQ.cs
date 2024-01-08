@@ -258,6 +258,20 @@ namespace PMTNCBA
             this.Hide();
         }
 
+        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+            this.Hide();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 

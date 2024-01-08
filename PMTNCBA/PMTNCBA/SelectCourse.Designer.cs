@@ -32,41 +32,48 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.kyThiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lTCSDLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lTCSDLDataSet = new PMTNCBA.LTCSDLDataSet();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.kyThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kyThiTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KyThiTableAdapter();
             this.lTCSDLDataSet1 = new PMTNCBA.LTCSDLDataSet1();
             this.lTCSDLDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKKQKTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ketQuaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KetQuaTableAdapter();
-            this.lTCSDLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kyThiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.kyThiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.kyThiBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lopTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.LopTableAdapter();
             this.khoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khoaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KhoaTableAdapter();
-            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.MonTableAdapter();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKKQKTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -100,6 +107,21 @@
             this.comboBox1.TabIndex = 21;
             this.comboBox1.ValueMember = "TenKT";
             // 
+            // kyThiBindingSource1
+            // 
+            this.kyThiBindingSource1.DataMember = "KyThi";
+            this.kyThiBindingSource1.DataSource = this.lTCSDLDataSetBindingSource;
+            // 
+            // lTCSDLDataSetBindingSource
+            // 
+            this.lTCSDLDataSetBindingSource.DataSource = this.lTCSDLDataSet;
+            this.lTCSDLDataSetBindingSource.Position = 0;
+            // 
+            // lTCSDLDataSet
+            // 
+            this.lTCSDLDataSet.DataSetName = "LTCSDLDataSet";
+            this.lTCSDLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox2
             // 
             this.comboBox2.DataSource = this.monBindingSource;
@@ -111,6 +133,11 @@
             this.comboBox2.TabIndex = 22;
             this.comboBox2.ValueMember = "MaMon";
             // 
+            // monBindingSource
+            // 
+            this.monBindingSource.DataMember = "Mon";
+            this.monBindingSource.DataSource = this.lTCSDLDataSetBindingSource;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -120,11 +147,6 @@
             this.label4.Size = new System.Drawing.Size(101, 25);
             this.label4.TabIndex = 30;
             this.label4.Text = "Đối tượng:";
-            // 
-            // lTCSDLDataSet
-            // 
-            this.lTCSDLDataSet.DataSetName = "LTCSDLDataSet";
-            this.lTCSDLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kyThiBindingSource
             // 
@@ -154,16 +176,6 @@
             // 
             this.ketQuaTableAdapter.ClearBeforeFill = true;
             // 
-            // lTCSDLDataSetBindingSource
-            // 
-            this.lTCSDLDataSetBindingSource.DataSource = this.lTCSDLDataSet;
-            this.lTCSDLDataSetBindingSource.Position = 0;
-            // 
-            // kyThiBindingSource1
-            // 
-            this.kyThiBindingSource1.DataMember = "KyThi";
-            this.kyThiBindingSource1.DataSource = this.lTCSDLDataSetBindingSource;
-            // 
             // kyThiBindingSource2
             // 
             this.kyThiBindingSource2.DataMember = "KyThi";
@@ -191,11 +203,6 @@
             // khoaTableAdapter
             // 
             this.khoaTableAdapter.ClearBeforeFill = true;
-            // 
-            // monBindingSource
-            // 
-            this.monBindingSource.DataMember = "Mon";
-            this.monBindingSource.DataSource = this.lTCSDLDataSetBindingSource;
             // 
             // monTableAdapter
             // 
@@ -249,11 +256,58 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hệThốngToolStripMenuItem,
+            this.chứcNăngToolStripMenuItem,
+            this.trợGiúpToolStripMenuItem,
+            this.nhómTácGiảToolStripMenuItem,
+            this.thoátToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(601, 28);
+            this.menuStrip1.TabIndex = 35;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // hệThốngToolStripMenuItem
+            // 
+            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
+            // 
+            // chứcNăngToolStripMenuItem
+            // 
+            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            // 
+            // nhómTácGiảToolStripMenuItem
+            // 
+            this.nhómTácGiảToolStripMenuItem.Name = "nhómTácGiảToolStripMenuItem";
+            this.nhómTácGiảToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
+            this.nhómTácGiảToolStripMenuItem.Text = "Nhóm tác giả";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
             // SelectCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 393);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
@@ -266,18 +320,20 @@
             this.Name = "SelectCourse";
             this.Text = "CoursePage";
             this.Load += new System.EventHandler(this.SelectCourse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKKQKTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +366,11 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhómTácGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }

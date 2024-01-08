@@ -91,5 +91,19 @@ namespace PMTNCBA
                 MessageBox.Show("Bạn không phải là Giáo viên!");
             }
         }
+
+        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+            this.Hide();
+        }
     }
 }
