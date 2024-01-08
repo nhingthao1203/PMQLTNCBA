@@ -40,6 +40,13 @@ namespace PMTNCBA
 
         }
 
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giaodien giaodien = new Giaodien();
+            giaodien.Show();
+            this.Hide();
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn
@@ -79,7 +86,7 @@ namespace PMTNCBA
                 }
                 else
                 {
-                    MessageBox.Show("Không tồn tại kỳ th này trên hệ thống!");
+                    MessageBox.Show("Không tồn tại kỳ thi này trên hệ thống!");
                 }
                 reader.Close();
 

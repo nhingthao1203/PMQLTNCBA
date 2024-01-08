@@ -138,7 +138,19 @@ namespace PMTNCBA
             }
         }
 
-            private void button1_Click(object sender, EventArgs e)
+        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg = new TG();
+            tg.Show();
+            this.Hide();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
             {
                 string constr = "Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(constr);
