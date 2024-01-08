@@ -453,6 +453,11 @@ namespace PMTNCBA
             this.Hide();
         }
 
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void tabControl2_MouseClick(object sender, MouseEventArgs e)
         {
             if (thongtinnv.GV == false)

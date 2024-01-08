@@ -40,6 +40,7 @@
             this.tCUQuizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tácGảiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             this.thiSinhBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.lopTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.LopTableAdapter();
             this.khoaTableAdapter = new PMTNCBA.LTCSDLDataSetTableAdapters.KhoaTableAdapter();
-            this.tácGảiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lTCSDLDataSetBindingSource1)).BeginInit();
@@ -75,39 +76,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.thiSinhBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKKQTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thiSinhBindingSource2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(396, 252);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(375, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(108, 25);
             this.label4.TabIndex = 22;
             this.label4.Text = "Mật khẩu:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(396, 200);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(375, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 21;
             this.label3.Text = "Tên đăng nhập:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 42);
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(201, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(527, 53);
+            this.label2.Size = new System.Drawing.Size(489, 56);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Tân Bình High School";
+            this.label2.Text = "ĐĂNG KÝ TÀI KHOẢN";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(426, 391);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(328, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 59);
             this.button1.TabIndex = 18;
@@ -118,25 +123,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(438, 453);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(314, 331);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 16);
+            this.label1.Size = new System.Drawing.Size(200, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "Bạn đã có tài khoản ?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(399, 271);
+            this.textBox2.Location = new System.Drawing.Point(605, 87);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 22);
+            this.textBox2.Size = new System.Drawing.Size(232, 36);
             this.textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(399, 223);
+            this.textBox1.Location = new System.Drawing.Point(605, 33);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 22);
+            this.textBox1.Size = new System.Drawing.Size(232, 36);
             this.textBox1.TabIndex = 12;
             // 
             // menuStrip1
@@ -150,94 +158,113 @@
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(691, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(908, 33);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tCUQuizToolStripMenuItem
             // 
+            this.tCUQuizToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.tCUQuizToolStripMenuItem.Name = "tCUQuizToolStripMenuItem";
-            this.tCUQuizToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.tCUQuizToolStripMenuItem.Text = "TanBinh Quiz";
+            this.tCUQuizToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
+            this.tCUQuizToolStripMenuItem.Text = "Trang chủ";
             // 
             // côngCụToolStripMenuItem
             // 
+            this.côngCụToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
-            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.côngCụToolStripMenuItem.Text = "Công cụ";
             // 
             // trợGiúpToolStripMenuItem
             // 
+            this.trợGiúpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(95, 29);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
+            // tácGảiToolStripMenuItem
+            // 
+            this.tácGảiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tácGảiToolStripMenuItem.Name = "tácGảiToolStripMenuItem";
+            this.tácGảiToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.tácGảiToolStripMenuItem.Text = "Tác giả";
+            this.tácGảiToolStripMenuItem.Click += new System.EventHandler(this.tácGảiToolStripMenuItem_Click);
+            // 
             // thoátToolStripMenuItem
             // 
+            this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(396, 303);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(375, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 16);
+            this.label5.Size = new System.Drawing.Size(205, 25);
             this.label5.TabIndex = 24;
             this.label5.Text = "Xác nhận mật khẩu:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(399, 322);
+            this.textBox3.Location = new System.Drawing.Point(605, 141);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 22);
+            this.textBox3.Size = new System.Drawing.Size(232, 39);
             this.textBox3.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(111, 303);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.Size = new System.Drawing.Size(70, 25);
             this.label6.TabIndex = 30;
-            this.label6.Text = "Khoa";
+            this.label6.Text = "Khoa:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 252);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 95);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.Size = new System.Drawing.Size(61, 25);
             this.label7.TabIndex = 28;
             this.label7.Text = "Lớp :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(111, 200);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(111, 25);
             this.label8.TabIndex = 27;
             this.label8.Text = "Họ và tên:";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(114, 223);
+            this.textBox6.Location = new System.Drawing.Point(139, 33);
+            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(221, 22);
+            this.textBox6.Size = new System.Drawing.Size(221, 35);
             this.textBox6.TabIndex = 25;
             // 
             // comboBox1
             // 
             this.comboBox1.DataSource = this.lopBindingSource;
             this.comboBox1.DisplayMember = "MaLop";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 271);
+            this.comboBox1.Location = new System.Drawing.Point(139, 87);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 24);
+            this.comboBox1.Size = new System.Drawing.Size(221, 33);
             this.comboBox1.TabIndex = 31;
             // 
             // lopBindingSource
@@ -259,10 +286,11 @@
             // 
             this.comboBox2.DataSource = this.khoaBindingSource;
             this.comboBox2.DisplayMember = "MaKhoa";
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 322);
+            this.comboBox2.Location = new System.Drawing.Point(139, 148);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(221, 24);
+            this.comboBox2.Size = new System.Drawing.Size(221, 33);
             this.comboBox2.TabIndex = 32;
             // 
             // khoaBindingSource
@@ -291,17 +319,19 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 391);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(120, 216);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(256, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(331, 26);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(111, 372);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 213);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.Size = new System.Drawing.Size(108, 25);
             this.label9.TabIndex = 34;
             this.label9.Text = "Ngày sinh\r\n";
             // 
@@ -327,35 +357,38 @@
             // 
             this.khoaTableAdapter.ClearBeforeFill = true;
             // 
-            // tácGảiToolStripMenuItem
+            // panel1
             // 
-            this.tácGảiToolStripMenuItem.Name = "tácGảiToolStripMenuItem";
-            this.tácGảiToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
-            this.tácGảiToolStripMenuItem.Text = "Tác giả";
-            this.tácGảiToolStripMenuItem.Click += new System.EventHandler(this.tácGảiToolStripMenuItem_Click);
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(26, 132);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(860, 366);
+            this.panel1.TabIndex = 35;
             // 
             // Dangky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 538);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(908, 521);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Dangky";
             this.Text = "Dangky";
@@ -371,6 +404,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.thiSinhBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKKQTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thiSinhBindingSource2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +449,6 @@
         private LTCSDLDataSetTableAdapters.KhoaTableAdapter khoaTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácGảiToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
