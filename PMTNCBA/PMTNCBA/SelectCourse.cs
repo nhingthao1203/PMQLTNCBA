@@ -47,6 +47,13 @@ namespace PMTNCBA
             this.Hide();
         }
 
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+            this.Hide();
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn

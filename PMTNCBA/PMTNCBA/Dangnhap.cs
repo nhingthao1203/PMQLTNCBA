@@ -44,9 +44,12 @@ namespace PMTNCBA
             
 
         }
+        
+
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             string constr = "Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True";
             SqlConnection conn = new SqlConnection(constr);
             SqlCommand cmd = new SqlCommand();
@@ -59,14 +62,18 @@ namespace PMTNCBA
                     sql = "select count(*) from NhanVien where DN = '" + textBox1.Text + "'and MK = '" + textBox2.Text + "'";
                     cmd = new SqlCommand(sql, conn);
                     int val = (int)cmd.ExecuteScalar();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
                     if (val == 1)
                     {
-                       
+
                         thongtinnv.DN = textBox1.Text.ToString();
                         thongtinnv.GV = true;
                         Giaodien giaodien = new Giaodien();
                         giaodien.Show();
                         this.Hide();
+
+
                     }
                     else
                     {
@@ -79,16 +86,19 @@ namespace PMTNCBA
                     sql = "select count(*) from ThiSinh where DN ='" + textBox1.Text + "' and MK = '" + textBox2.Text + "' ";
                     cmd = new SqlCommand(sql, conn);
                     int val = (int)cmd.ExecuteScalar();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
                     if (val == 1)
                     {
-                       
+
                         thongtinsv.SV = true;
                         thongtinsv.DN = textBox1.Text.ToString();
-
-                        // mở form thông tin
                         Giaodien giaodien = new Giaodien();
                         giaodien.Show();
                         this.Hide();
+
+                        // mở form thông tin
+
                     }
                     else
                     {
@@ -108,208 +118,9 @@ namespace PMTNCBA
                 }
             }
 
+
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Dangnhap dangnhap &&
-                   CanRaiseEvents == dangnhap.CanRaiseEvents &&
-                   EqualityComparer<EventHandlerList>.Default.Equals(Events, dangnhap.Events) &&
-                   EqualityComparer<ISite>.Default.Equals(Site, dangnhap.Site) &&
-                   EqualityComparer<IContainer>.Default.Equals(Container, dangnhap.Container) &&
-                   DesignMode == dangnhap.DesignMode &&
-                   EqualityComparer<AccessibleObject>.Default.Equals(AccessibilityObject, dangnhap.AccessibilityObject) &&
-                   AccessibleDefaultActionDescription == dangnhap.AccessibleDefaultActionDescription &&
-                   AccessibleDescription == dangnhap.AccessibleDescription &&
-                   AccessibleName == dangnhap.AccessibleName &&
-                   AccessibleRole == dangnhap.AccessibleRole &&
-                   AllowDrop == dangnhap.AllowDrop &&
-                   Anchor == dangnhap.Anchor &&
-                   AutoSize == dangnhap.AutoSize &&
-                   EqualityComparer<Point>.Default.Equals(AutoScrollOffset, dangnhap.AutoScrollOffset) &&
-                   EqualityComparer<LayoutEngine>.Default.Equals(LayoutEngine, dangnhap.LayoutEngine) &&
-                   EqualityComparer<Color>.Default.Equals(BackColor, dangnhap.BackColor) &&
-                   EqualityComparer<Image>.Default.Equals(BackgroundImage, dangnhap.BackgroundImage) &&
-                   BackgroundImageLayout == dangnhap.BackgroundImageLayout &&
-                   EqualityComparer<BindingContext>.Default.Equals(BindingContext, dangnhap.BindingContext) &&
-                   Bottom == dangnhap.Bottom &&
-                   EqualityComparer<Rectangle>.Default.Equals(Bounds, dangnhap.Bounds) &&
-                   CanFocus == dangnhap.CanFocus &&
-                   CanRaiseEvents == dangnhap.CanRaiseEvents &&
-                   CanSelect == dangnhap.CanSelect &&
-                   Capture == dangnhap.Capture &&
-                   CausesValidation == dangnhap.CausesValidation &&
-                   EqualityComparer<Rectangle>.Default.Equals(ClientRectangle, dangnhap.ClientRectangle) &&
-                   EqualityComparer<Size>.Default.Equals(ClientSize, dangnhap.ClientSize) &&
-                   CompanyName == dangnhap.CompanyName &&
-                   ContainsFocus == dangnhap.ContainsFocus &&
-                   EqualityComparer<ContextMenu>.Default.Equals(ContextMenu, dangnhap.ContextMenu) &&
-                   EqualityComparer<ContextMenuStrip>.Default.Equals(ContextMenuStrip, dangnhap.ContextMenuStrip) &&
-                   EqualityComparer<Control.ControlCollection>.Default.Equals(Controls, dangnhap.Controls) &&
-                   Created == dangnhap.Created &&
-                   EqualityComparer<CreateParams>.Default.Equals(CreateParams, dangnhap.CreateParams) &&
-                   EqualityComparer<Cursor>.Default.Equals(Cursor, dangnhap.Cursor) &&
-                   EqualityComparer<ControlBindingsCollection>.Default.Equals(DataBindings, dangnhap.DataBindings) &&
-                   EqualityComparer<Cursor>.Default.Equals(DefaultCursor, dangnhap.DefaultCursor) &&
-                   EqualityComparer<Padding>.Default.Equals(DefaultMargin, dangnhap.DefaultMargin) &&
-                   EqualityComparer<Size>.Default.Equals(DefaultMaximumSize, dangnhap.DefaultMaximumSize) &&
-                   EqualityComparer<Size>.Default.Equals(DefaultMinimumSize, dangnhap.DefaultMinimumSize) &&
-                   EqualityComparer<Padding>.Default.Equals(DefaultPadding, dangnhap.DefaultPadding) &&
-                   EqualityComparer<Size>.Default.Equals(DefaultSize, dangnhap.DefaultSize) &&
-                   DeviceDpi == dangnhap.DeviceDpi &&
-                   EqualityComparer<Rectangle>.Default.Equals(DisplayRectangle, dangnhap.DisplayRectangle) &&
-                   IsDisposed == dangnhap.IsDisposed &&
-                   Disposing == dangnhap.Disposing &&
-                   Dock == dangnhap.Dock &&
-                   DoubleBuffered == dangnhap.DoubleBuffered &&
-                   Enabled == dangnhap.Enabled &&
-                   Focused == dangnhap.Focused &&
-                   EqualityComparer<Font>.Default.Equals(Font, dangnhap.Font) &&
-                   FontHeight == dangnhap.FontHeight &&
-                   EqualityComparer<Color>.Default.Equals(ForeColor, dangnhap.ForeColor) &&
-                   EqualityComparer<IntPtr>.Default.Equals(Handle, dangnhap.Handle) &&
-                   HasChildren == dangnhap.HasChildren &&
-                   Height == dangnhap.Height &&
-                   IsHandleCreated == dangnhap.IsHandleCreated &&
-                   InvokeRequired == dangnhap.InvokeRequired &&
-                   IsAccessible == dangnhap.IsAccessible &&
-                   IsMirrored == dangnhap.IsMirrored &&
-                   Left == dangnhap.Left &&
-                   EqualityComparer<Point>.Default.Equals(Location, dangnhap.Location) &&
-                   EqualityComparer<Padding>.Default.Equals(Margin, dangnhap.Margin) &&
-                   EqualityComparer<Size>.Default.Equals(MaximumSize, dangnhap.MaximumSize) &&
-                   EqualityComparer<Size>.Default.Equals(MinimumSize, dangnhap.MinimumSize) &&
-                   Name == dangnhap.Name &&
-                   EqualityComparer<Control>.Default.Equals(Parent, dangnhap.Parent) &&
-                   ProductName == dangnhap.ProductName &&
-                   ProductVersion == dangnhap.ProductVersion &&
-                   RecreatingHandle == dangnhap.RecreatingHandle &&
-                   EqualityComparer<Region>.Default.Equals(Region, dangnhap.Region) &&
-                   //RenderRightToLeft == dangnhap.RenderRightToLeft &&
-                   ResizeRedraw == dangnhap.ResizeRedraw &&
-                   Right == dangnhap.Right &&
-                   RightToLeft == dangnhap.RightToLeft &&
-                   ScaleChildren == dangnhap.ScaleChildren &&
-                   EqualityComparer<ISite>.Default.Equals(Site, dangnhap.Site) &&
-                   EqualityComparer<Size>.Default.Equals(Size, dangnhap.Size) &&
-                   TabIndex == dangnhap.TabIndex &&
-                   TabStop == dangnhap.TabStop &&
-                   EqualityComparer<object>.Default.Equals(Tag, dangnhap.Tag) &&
-                   Text == dangnhap.Text &&
-                   Top == dangnhap.Top &&
-                   EqualityComparer<Control>.Default.Equals(TopLevelControl, dangnhap.TopLevelControl) &&
-                   ShowKeyboardCues == dangnhap.ShowKeyboardCues &&
-                   ShowFocusCues == dangnhap.ShowFocusCues &&
-                   UseWaitCursor == dangnhap.UseWaitCursor &&
-                   Visible == dangnhap.Visible &&
-                   Width == dangnhap.Width &&
-                   EqualityComparer<IWindowTarget>.Default.Equals(WindowTarget, dangnhap.WindowTarget) &&
-                   EqualityComparer<Size>.Default.Equals(PreferredSize, dangnhap.PreferredSize) &&
-                   EqualityComparer<Padding>.Default.Equals(Padding, dangnhap.Padding) &&
-                   CanEnableIme == dangnhap.CanEnableIme &&
-                   DefaultImeMode == dangnhap.DefaultImeMode &&
-                   ImeMode == dangnhap.ImeMode &&
-                   ImeModeBase == dangnhap.ImeModeBase &&
-                   AutoScroll == dangnhap.AutoScroll &&
-                   EqualityComparer<Size>.Default.Equals(AutoScrollMargin, dangnhap.AutoScrollMargin) &&
-                   EqualityComparer<Point>.Default.Equals(AutoScrollPosition, dangnhap.AutoScrollPosition) &&
-                   EqualityComparer<Size>.Default.Equals(AutoScrollMinSize, dangnhap.AutoScrollMinSize) &&
-                   EqualityComparer<CreateParams>.Default.Equals(CreateParams, dangnhap.CreateParams) &&
-                   EqualityComparer<Rectangle>.Default.Equals(DisplayRectangle, dangnhap.DisplayRectangle) &&
-                   HScroll == dangnhap.HScroll &&
-                   EqualityComparer<HScrollProperties>.Default.Equals(HorizontalScroll, dangnhap.HorizontalScroll) &&
-                   VScroll == dangnhap.VScroll &&
-                   EqualityComparer<VScrollProperties>.Default.Equals(VerticalScroll, dangnhap.VerticalScroll) &&
-                   EqualityComparer<DockPaddingEdges>.Default.Equals(DockPadding, dangnhap.DockPadding) &&
-                   EqualityComparer<SizeF>.Default.Equals(AutoScaleDimensions, dangnhap.AutoScaleDimensions) &&
-                   EqualityComparer<SizeF>.Default.Equals(AutoScaleFactor, dangnhap.AutoScaleFactor) &&
-                   AutoScaleMode == dangnhap.AutoScaleMode &&
-                   AutoValidate == dangnhap.AutoValidate &&
-                   EqualityComparer<BindingContext>.Default.Equals(BindingContext, dangnhap.BindingContext) &&
-                   CanEnableIme == dangnhap.CanEnableIme &&
-                   EqualityComparer<Control>.Default.Equals(ActiveControl, dangnhap.ActiveControl) &&
-                   EqualityComparer<CreateParams>.Default.Equals(CreateParams, dangnhap.CreateParams) &&
-                   EqualityComparer<SizeF>.Default.Equals(CurrentAutoScaleDimensions, dangnhap.CurrentAutoScaleDimensions) &&
-                   EqualityComparer<Form>.Default.Equals(ParentForm, dangnhap.ParentForm) &&
-                   EqualityComparer<IButtonControl>.Default.Equals(AcceptButton, dangnhap.AcceptButton) &&
-                   EqualityComparer<Form>.Default.Equals(ActiveMdiChild, dangnhap.ActiveMdiChild) &&
-                   AllowTransparency == dangnhap.AllowTransparency &&
-                   AutoScale == dangnhap.AutoScale &&
-                   EqualityComparer<Size>.Default.Equals(AutoScaleBaseSize, dangnhap.AutoScaleBaseSize) &&
-                   AutoScroll == dangnhap.AutoScroll &&
-                   AutoSize == dangnhap.AutoSize &&
-                   AutoSizeMode == dangnhap.AutoSizeMode &&
-                   AutoValidate == dangnhap.AutoValidate &&
-                   EqualityComparer<Color>.Default.Equals(BackColor, dangnhap.BackColor) &&
-                   FormBorderStyle == dangnhap.FormBorderStyle &&
-                   EqualityComparer<IButtonControl>.Default.Equals(CancelButton, dangnhap.CancelButton) &&
-                   EqualityComparer<Size>.Default.Equals(ClientSize, dangnhap.ClientSize) &&
-                   ControlBox == dangnhap.ControlBox &&
-                   EqualityComparer<CreateParams>.Default.Equals(CreateParams, dangnhap.CreateParams) &&
-                   DefaultImeMode == dangnhap.DefaultImeMode &&
-                   EqualityComparer<Size>.Default.Equals(DefaultSize, dangnhap.DefaultSize) &&
-                   EqualityComparer<Rectangle>.Default.Equals(DesktopBounds, dangnhap.DesktopBounds) &&
-                   EqualityComparer<Point>.Default.Equals(DesktopLocation, dangnhap.DesktopLocation) &&
-                   DialogResult == dangnhap.DialogResult &&
-                   HelpButton == dangnhap.HelpButton &&
-                   EqualityComparer<Icon>.Default.Equals(Icon, dangnhap.Icon) &&
-                   IsMdiChild == dangnhap.IsMdiChild &&
-                   IsMdiContainer == dangnhap.IsMdiContainer &&
-                   IsRestrictedWindow == dangnhap.IsRestrictedWindow &&
-                   KeyPreview == dangnhap.KeyPreview &&
-                   EqualityComparer<Point>.Default.Equals(Location, dangnhap.Location) &&
-                   EqualityComparer<Rectangle>.Default.Equals(MaximizedBounds, dangnhap.MaximizedBounds) &&
-                   EqualityComparer<Size>.Default.Equals(MaximumSize, dangnhap.MaximumSize) &&
-                   EqualityComparer<MenuStrip>.Default.Equals(MainMenuStrip, dangnhap.MainMenuStrip) &&
-                   EqualityComparer<Padding>.Default.Equals(Margin, dangnhap.Margin) &&
-                   EqualityComparer<MainMenu>.Default.Equals(Menu, dangnhap.Menu) &&
-                   EqualityComparer<Size>.Default.Equals(MinimumSize, dangnhap.MinimumSize) &&
-                   MaximizeBox == dangnhap.MaximizeBox &&
-                   EqualityComparer<Form[]>.Default.Equals(MdiChildren, dangnhap.MdiChildren) &&
-                   EqualityComparer<Form>.Default.Equals(MdiParent, dangnhap.MdiParent) &&
-                   EqualityComparer<MainMenu>.Default.Equals(MergedMenu, dangnhap.MergedMenu) &&
-                   MinimizeBox == dangnhap.MinimizeBox &&
-                   Modal == dangnhap.Modal &&
-                   Opacity == dangnhap.Opacity &&
-                   EqualityComparer<Form[]>.Default.Equals(OwnedForms, dangnhap.OwnedForms) &&
-                   EqualityComparer<Form>.Default.Equals(Owner, dangnhap.Owner) &&
-                   EqualityComparer<Rectangle>.Default.Equals(RestoreBounds, dangnhap.RestoreBounds) &&
-                   RightToLeftLayout == dangnhap.RightToLeftLayout &&
-                   ShowInTaskbar == dangnhap.ShowInTaskbar &&
-                   ShowIcon == dangnhap.ShowIcon &&
-                   ShowWithoutActivation == dangnhap.ShowWithoutActivation &&
-                   EqualityComparer<Size>.Default.Equals(Size, dangnhap.Size) &&
-                   SizeGripStyle == dangnhap.SizeGripStyle &&
-                   StartPosition == dangnhap.StartPosition &&
-                   TabIndex == dangnhap.TabIndex &&
-                   TabStop == dangnhap.TabStop &&
-                   Text == dangnhap.Text &&
-                   TopLevel == dangnhap.TopLevel &&
-                   TopMost == dangnhap.TopMost &&
-                   EqualityComparer<Color>.Default.Equals(TransparencyKey, dangnhap.TransparencyKey) &&
-                   WindowState == dangnhap.WindowState &&
-                   EqualityComparer<SqlConnection>.Default.Equals(conn, dangnhap.conn) &&
-                   EqualityComparer<SqlDataAdapter>.Default.Equals(da, dangnhap.da) &&
-                   EqualityComparer<SqlCommand>.Default.Equals(cmd, dangnhap.cmd) &&
-                   EqualityComparer<DataTable>.Default.Equals(dt, dangnhap.dt) &&
-                   sql == dangnhap.sql &&
-                   constr == dangnhap.constr &&
-                   EqualityComparer<IContainer>.Default.Equals(components, dangnhap.components) &&
-                   EqualityComparer<TextBox>.Default.Equals(textBox1, dangnhap.textBox1) &&
-                   EqualityComparer<TextBox>.Default.Equals(textBox2, dangnhap.textBox2) &&
-                   EqualityComparer<RadioButton>.Default.Equals(radioButton1, dangnhap.radioButton1) &&
-                   EqualityComparer<RadioButton>.Default.Equals(radioButton2, dangnhap.radioButton2) &&
-                   EqualityComparer<Button>.Default.Equals(button2, dangnhap.button2) &&
-                   EqualityComparer<Label>.Default.Equals(label1, dangnhap.label1) &&
-                   EqualityComparer<Button>.Default.Equals(button1, dangnhap.button1) &&
-                   EqualityComparer<MenuStrip>.Default.Equals(menuStrip1, dangnhap.menuStrip1) &&
-                   EqualityComparer<ToolStripMenuItem>.Default.Equals(tCUQuizToolStripMenuItem, dangnhap.tCUQuizToolStripMenuItem) &&
-                   EqualityComparer<ToolStripMenuItem>.Default.Equals(côngCụToolStripMenuItem, dangnhap.côngCụToolStripMenuItem) &&
-                   EqualityComparer<ToolStripMenuItem>.Default.Equals(trợGiúpToolStripMenuItem, dangnhap.trợGiúpToolStripMenuItem) &&
-                   EqualityComparer<Label>.Default.Equals(label2, dangnhap.label2) &&
-                   EqualityComparer<Label>.Default.Equals(label3, dangnhap.label3) &&
-                   EqualityComparer<Label>.Default.Equals(label4, dangnhap.label4);
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

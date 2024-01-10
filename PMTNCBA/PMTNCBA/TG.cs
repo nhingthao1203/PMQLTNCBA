@@ -31,8 +31,8 @@ namespace PMTNCBA
 
         private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TG tg = new TG();
-            tg.Show();
+            Help help = new Help();
+            help.Show();
             this.Hide();
         }
 

@@ -85,8 +85,8 @@ namespace PMTNCBA
                 //cmd.Connection = conn;
 
                 // Thực hiện truy vấn
-                string query1 = "INSERT INTO THISINH (MaTS, Ten, DN, Lop,Khoa, MK,NgaySinh) " +
-                                   "VALUES (@MaTS, @Ten, @DN, @Lop,@Khoa, @MK, @NgaySinh)";
+                string query1 = "INSERT INTO ThiSinh (MaTS, Ten, DN, Lop,Khoa, MK,NgaySinh,TrangThai, Quyen) " +
+                                   "VALUES (@MaTS, @Ten, @DN, @Lop,@Khoa, @MK, @NgaySinh,@TrangThai,@Quyen)";
                 cmd.Parameters.AddWithValue("@MaTS", maTS);
                 cmd.Parameters.AddWithValue("@Ten", textBox6.Text);
                 cmd.Parameters.AddWithValue("@DN", textBox1.Text);
@@ -94,6 +94,8 @@ namespace PMTNCBA
                 cmd.Parameters.AddWithValue("@Khoa", comboBox2.Text);
                 cmd.Parameters.AddWithValue("@MK", mk1);
                 cmd.Parameters.AddWithValue("@NgaySinh", dateTimePicker1.Value);
+                cmd.Parameters.AddWithValue("@TrangThai",1);
+                cmd.Parameters.AddWithValue("@Quyen", 1);
                 cmd.Connection = conn;
                 cmd.CommandText = query1;
                 cmd.ExecuteNonQuery();
@@ -132,6 +134,76 @@ namespace PMTNCBA
             TG tg = new TG();
             tg.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Dangky_Load(object sender, EventArgs e)
