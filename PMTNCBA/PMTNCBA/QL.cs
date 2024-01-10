@@ -83,10 +83,28 @@ namespace PMTNCBA
                 }
 
                 cmd.ExecuteNonQuery();
-
+                dataGridView1.Refresh();
                 MessageBox.Show("Thêm thông tin thành công!");
             }
 
+        }
+        private void RefreshDataGridView()
+        {
+            // Viết mã để tải lại dữ liệu từ cơ sở dữ liệu vào DataGridView
+            // Sau khi thêm dữ liệu mới, bạn có thể gọi phương thức này để cập nhật DataGridView
+            // Ví dụ: Làm mới DataSource của DataGridView từ cơ sở dữ liệu
+            string constr = "Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True";
+            string query = "select * from NhanVien where MaNV = @MaNV";
+
+            using (SqlConnection conn = new SqlConnection(constr))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
         }
 
         private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,12 +128,15 @@ namespace PMTNCBA
 
         private void QL_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lTCSDLDataSet.KyThi' table. You can move, or remove it, as needed.
+            this.kyThiTableAdapter.Fill(this.lTCSDLDataSet.KyThi);
             // TODO: This line of code loads data into the 'lTCSDLDataSet.Mon' table. You can move, or remove it, as needed.
             this.monTableAdapter.Fill(this.lTCSDLDataSet.Mon);
             constr = "Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
             string manhanvien = thongtinnv.MNV;
+            textBox3.Text = manhanvien;
             using (SqlConnection conn = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True")) // Thay thế connection_string bằng chuỗi kết nối thực tế của bạn
             {
                 conn.Open();
@@ -148,6 +169,76 @@ namespace PMTNCBA
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có dòng nào được chọn không
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy ra dòng được chọn
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Kết nối đến cơ sở dữ liệu SQL Server
+                SqlConnection connection = new SqlConnection("Data Source=KA\\NHI1203;Initial Catalog=LTCSDL;Integrated Security=True");
+                SqlCommand command = new SqlCommand();
+                // Giả sử cột ID nằm ở cột đầu tiên (index 0) trong DataGridView
+                int makythi = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+                // Câu truy vấn SQL để xóa dữ liệu từ bảng với ID tương ứng
+                string query = "DELETE FROM KyThi WHERE MaKyThi = @MaKyThi";
+
+                command.Parameters.AddWithValue("@MaKyThi", makythi);
+                command.Connection = connection;
+                command.CommandText = query;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                // Xóa dòng được chọn khỏi DataGridView
+
+                dataGridView1.Rows.Remove(selectedRow);
+                //RefreshDataGridView();
+                // Assume dt is your DataTable
+                MessageBox.Show("Xóa thành công.", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //dataGridView1.DataSource = dt; // Gán lại nguồn dữ liệu
+                dataGridView1.Refresh(); // Refresh để hiển thị dữ liệu mới
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn dòng để xóa.", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label17.Visible = false;
+            numericUpDown3.Visible = false;
+            label19.Visible = false;
+            numericUpDown5.Visible = false;
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label17.Visible = true;
+            numericUpDown3.Visible = true;
+            label19.Visible = true;
+            numericUpDown5.Visible = true;
+        }
+
+        private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

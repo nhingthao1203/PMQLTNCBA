@@ -73,6 +73,16 @@ namespace PMTNCBA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Error_80_icon_icons_com_57326 {
+            get {
+                object obj = ResourceManager.GetObject("Error-80_icon-icons.com_57326", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -83,9 +93,29 @@ namespace PMTNCBA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LOGO_TANBINH {
+            get {
+                object obj = ResourceManager.GetObject("LOGO_TANBINH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2023_12_28_140435 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2023-12-28 140435", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_account_person_avatar_icon_131248 {
+            get {
+                object obj = ResourceManager.GetObject("user_account_person_avatar_icon_131248", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

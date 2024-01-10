@@ -22,6 +22,8 @@ namespace PMTNCBA
         DataTable dt = new DataTable();
         string sql, constr;
         private object row;
+        private System.Windows.Forms.Timer countdownTimer;
+
         public struct CauTraLoi
         {
             public string CauHoi; // Chứa nội dung của câu hỏi
@@ -34,6 +36,28 @@ namespace PMTNCBA
         public Thi()
         {
             InitializeComponent();
+            countdownTimer = new System.Windows.Forms.Timer();
+            countdownTimer.Interval = 1000; // 1 giây
+            countdownTimer.Tick += new EventHandler(OnTimerTick);
+        }
+        private void OnTimerTick(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu thời gian đã hết
+            TimeSpan countdownTime = DateTime.Parse(label20.Text) - DateTime.Now;
+            if (countdownTime.TotalSeconds <= 0)
+            {
+                // Dừng Timer khi thời gian đã hết
+                countdownTimer.Stop();
+
+                // Thực hiện nộp bài tự động
+                NopBaiTuDong();
+            }
+        }
+        private void NopBaiTuDong()
+        {
+            // Đây là nơi bạn thực hiện việc nộp bài tự động, có thể gọi phương thức xử lý nộp bài của bạn ở đây
+            // Ví dụ: button3_Click(sender, e);
+            button3.PerformClick(); // Gọi sự kiện click của butto3 để nộp bài tự động
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -84,6 +108,7 @@ namespace PMTNCBA
 
                     // Tính thời gian kết thúc làm bài dựa trên thời gian click và thời gian làm bài
                     DateTime closeTime1 = clickTime.AddMinutes(timeDuration1);
+
 
                     // Tạo một hàm xử lý việc cập nhật label20 với thời gian còn lại
                     void UpdateCountdown(object senderObj, EventArgs eventArgs)
@@ -440,6 +465,30 @@ namespace PMTNCBA
 
         private void button6_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Liên Hệ với phòng quản lý thi để được hỗ trợ!");
+        }
+
+        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TG tg=new TG();
+            tg.Show();
+            this.Hide();
+        }
+
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giaodien giaodien = new Giaodien();
+            giaodien.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             int soCauDung = 0; // Số câu trả lời đúng
 
             // Duyệt qua danh sách câu trả lời để kiểm tra số câu trả lời đúng
@@ -456,8 +505,8 @@ namespace PMTNCBA
             double Diem = soCauDung;
 
             // Chuẩn bị thông tin cho truy vấn SQL INSERT
-            string MaTS = "TS001";
-            string MaKyThi = "2";
+            string MaTS = thongtinsv.MSV;
+            string MaKyThi = thongtinsv.MaKyThi;
             string NgayThi = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt"); // Format ngày giờ thành chuỗi
             int TongTGThi = 3600;
             int TGTraLoiDe = 1800;
@@ -508,26 +557,7 @@ namespace PMTNCBA
             }
 
             // Hiển thị kết quả điểm số, có thể sử dụng MessageBox hoặc hiển thị trực tiếp trên form
-            MessageBox.Show($"Điểm của bạn là: {soCauDung}");
-            Giaodien giaodien = new Giaodien();
-            giaodien.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Liên Hệ với phòng quản lý thi để được hỗ trợ!");
-        }
-
-        private void nhómTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TG tg=new TG();
-            tg.Show();
-            this.Hide();
-        }
-
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            MessageBox.Show($"Điểm của bạn là: {soCauDung}*2");
             Giaodien giaodien = new Giaodien();
             giaodien.Show();
             this.Hide();

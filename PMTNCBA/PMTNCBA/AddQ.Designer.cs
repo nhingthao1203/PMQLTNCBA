@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQ));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lTCSDLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -443,6 +444,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1309, 36);
             this.menuStrip1.TabIndex = 28;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -546,6 +548,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddQ";
             this.Text = "AddQ";
             this.Load += new System.EventHandler(this.AddQ_Load);

@@ -17,6 +17,7 @@ namespace PMTNCBA
         public static bool SV = false;
         public static string MaKyThi;
         public static string Ten;
+        public static string TrangThai;
     }
   
 
@@ -26,6 +27,8 @@ namespace PMTNCBA
         public static string MNV;
         public static string MATKHAU;
         public static bool GV = false;
+        public static string TrangThai;
+        public static string PQ;
     }
     internal class function
     {
